@@ -9,9 +9,22 @@ namespace Used_Car_Lot_Lab
     internal class UserCar : Car
     {
         public int Mileage{get; set;}
-        public UserCar(string _make, string _model, int _year, decimal _price, int Mileage) : base(_make, _model, _year, _price)
+        public UserCar(string _make, string _model, int _year, decimal _price, int _mileage) : base(_make, _model, _year, _price)
         {
+            Mileage = _mileage;
+        }
+        public override string ToString()
+        {
+            return base.ToString();
         }
 
+
+
+
+
     }
+
+
+
+
 }
