@@ -15,7 +15,7 @@ namespace Used_Car_Lot_Lab
         }
         public override string ToString()
         {
-            return base.ToString();
+            return base.ToString() + String.Format("{0,10}, {1,10}", Mileage, "Used");
         }
 
 
