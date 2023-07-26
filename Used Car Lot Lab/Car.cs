@@ -25,10 +25,10 @@ namespace Used_Car_Lot_Lab
         }
 
         //methods
-        public string ShowDetails()
-        {
-            return String.Format("{0,-11} {1,-11} {2,-4} {3,12:c}", Make, Model, Year, Price);
-        }
+        //public string ShowDetails()
+        //{
+        //    return String.Format("{0,-11} {1,-11} {2,-4} {3,12:c}", Make, Model, Year, Price);
+        //}
         public override string ToString()
         {
             return String.Format("{0,-11} {1,-11} {2,-4} {3,12:c}", Make, Model, Year, Price);

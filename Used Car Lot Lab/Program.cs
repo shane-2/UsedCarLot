@@ -1,4 +1,5 @@
-﻿using Used_Car_Lot_Lab;
+﻿using TimTool;
+using Used_Car_Lot_Lab;
 
 Console.WriteLine("Welcome to Grand circus Car Lot.");
 List<Car> Allcar = new List<Car>()
@@ -20,8 +21,8 @@ Console.WriteLine("Which car do you want to buy?");
 string choice = Console.ReadLine().ToLower().Trim();
 
 bool Yesno = false;
-Car match = Allcar.FirstOrDefault(x => x.Model.ToLower() == choice);
-Console.WriteLine(match.ToString());
+// This initializes a menu that selects the car 
+Car name = Menu.CarPas(Allcar);
 Console.WriteLine("");
 Console.WriteLine("Would you like to buy this car? y/n");
 string yn = Console.ReadLine().ToLower().Trim();
@@ -29,18 +30,18 @@ string yn = Console.ReadLine().ToLower().Trim();
 
 if (yn == "y")
 {
-    Allcar.Remove(match);
+    Allcar.Remove(name);
 }
 else
 {
 
 }
 
-foreach (Car i in Allcar)
-{
-    Console.WriteLine(i);
-}
+//foreach (Car i in Allcar)
+//{
+//    Console.WriteLine(i);
+//}
 
-Console.WriteLine("Would you like to list a car ");
+//Console.WriteLine("Would you like to list a car ");
 
 
