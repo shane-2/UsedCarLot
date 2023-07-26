@@ -18,30 +18,15 @@ foreach (var car in Allcar)
 
 Console.WriteLine("Which car do you want to buy?");
 string choice = Console.ReadLine().ToLower().Trim();
-//bool Found = Allcar.Any(x => x.Model.ToLower() == choice); 
+
 if (Allcar.Any(x => x.Model.ToLower() == choice))
-    { 
-
-    }
-//(Allcar.Any(x => x.Model.ToLower() = choice))
-    //{
-    //Console.WriteLine();
-    //}
-//string indx = Allcar.FindIndex(s => s == choice);
-
-//while (int.TryParse(Console.ReadLine(), out choice) == false)
-
-
-
-
-
-List<Car> MakerList = Allcar.Where(c => c.Make.ToLower() == choice).ToList();
+{
+    Allcar.Remove(choice);
+}
 
 
 
 
 
 
-string name = "bob";
-List<string> names = new List<string> { "dood", "tom", "doddl", "bob", "toby" };
 
