@@ -34,7 +34,17 @@ namespace Used_Car_Lot_Lab
             return String.Format("{0,-11} {1,-11} {2,-4} {3,12:c}", Make, Model, Year, Price);
         }
 
+        public List<Car> RemoveNum(List<Car> l, Car n)
+        {
+            if (l.Contains(n))
+            {
 
+                l.Remove(n);
+            }
+
+
+            return l;
+        }
     }
 
 }

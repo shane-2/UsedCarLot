@@ -19,14 +19,34 @@ foreach (var car in Allcar)
 Console.WriteLine("Which car do you want to buy?");
 string choice = Console.ReadLine().ToLower().Trim();
 
-if (Allcar.Any(x => x.Model.ToLower() == choice))
+//if (Allcar.Any(x => x.Model.ToLower() == choice))
+//{
+//    foreach (Car i in Allcar)
+//    {
+        
+//    Allcar.Remove(i);
+//    }
+//}
+
+Allcar.RemoveAll(x => x.Model.ToLower().Trim() == choice);
+
+foreach(Car i in Allcar)
 {
-    Allcar.Remove(choice);
+    Console.WriteLine(i);
 }
 
 
 
 
+//methods
+//static List<Car> RemoveNum(List<Car> l, Car n)
+//{
+//    if (l.Contains(n))
+//    {
+
+//        l.Remove(n);
+//    }
 
 
-
+//    return l;
+//}
